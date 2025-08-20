@@ -36,21 +36,32 @@ class CalculatorApp(QMainWindow):
         elif operation == "Multiplication":
             result = number1 * number2
         elif operation == "Log":
-            if number1 > 0 and number2 > 0:
+            if number1 > 0 and number2 > 0 and number1 == number2:
+                a = math.log(number1)
+                b = math.log(number2)
+                result = (a + b) / 2
+            elif number1 > 0 and number2 > 0:
                 a = math.log(number1)
                 b = math.log(number2)
                 result = a + b
             else:
                 result = "Invalid input for log"
         elif operation == "Square root":
-            if number1 > 0 and number2 > 0:
+            if number1 > 0 and number2 > 0 and number1 == number2:
+                a = math.sqrt(number1)
+                b = math.sqrt(number2)
+                result = (a + b) / 2
+            elif number1 > 0 and number2 > 0:
                 a = math.sqrt(number1)
                 b = math.sqrt(number2)
                 result = a + b
             else:
                 result = "Invalid input for square root"
         elif operation == "Square":
-            result = number1 ** 2 + number2 ** 2
+            if number1 == number2:
+                result = (number1 ** 2 + number2 ** 2) / 2
+            else:
+                result = number1 ** 2 + number2 ** 2
         elif operation == "Division":
             if number2 != 0:
                 result = number1 / number2
