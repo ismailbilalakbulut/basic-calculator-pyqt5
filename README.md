@@ -1,6 +1,6 @@
 # Basic calculator with pyqt5
 A simple calculator performs addition, subtraction, multiplication, division, logarithm, squaring, and square root operations.
-![Screenshot](basic-calculator-image)
+![Screenshot](basic-calculator-image.png)
 ## Features
 - Addition
 - Substraction
